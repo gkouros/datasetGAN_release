@@ -1,2 +1,4 @@
 __pycache__
 datasetGAN/dataset_release
+datasetGAN/checkpoints
+datasetGAN/model_dir
