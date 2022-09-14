@@ -130,7 +130,7 @@ def main(data_path, args, resume, max_data=0, uncertainty_portion=0):
                               label_path_list=stylegan_labels, trans=trans_method,
                             img_size=(args['deeplab_res'], args['deeplab_res']))
 
-    train_data = DataLoader(train_data, batch_size=8, shuffle=True, num_workers=16)
+    train_data = DataLoader(train_data, batch_size=8, shuffle=True, num_workers=4)
     classifier = torchvision.models.segmentation.deeplabv3_resnet101(pretrained=False, progress=False,
                                                                      num_classes=num_class, aux_loss=None)
     if resume != "":
