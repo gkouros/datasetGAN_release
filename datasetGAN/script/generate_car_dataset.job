@@ -1,0 +1,20 @@
+Universe = vanilla
+
+RequestCpus = 4
+Request_GPUs = 1
+RequestMemory = 8Gb
++RequestWalltime = 259000
+
+Requirements = (CUDACapability >= 7.0)&&(CUDAGlobalMemoryMb >= 8000.0)&&(machine != "andromeda.esat.kuleuven.be")&&(machine != "aristoteles.esat.kuleuven.be")&&(machine != "z4-demo.esat.kuleuven.be")
+
+Initialdir = /users/visics/gkouros/projects/nerf-repos/datasetGAN/datasetGAN/script
+Executable = /users/visics/gkouros/projects/nerf-repos/datasetGAN/datasetGAN/script/generate_car_dataset.sh
+
+NiceUser = false
+
+Log    =  ../logs/exp.$(Cluster).log
+Output =  ../logs/exp.$(Cluster).out
+Error  =  ../logs/exp.$(Cluster).err
+
+Notification = Complete
+Queue 1

@@ -7,6 +7,6 @@ conda activate datasetGAN
 
 cd /users/visics/gkouros/projects/nerf-repos/datasetGAN/datasetGAN
 
-python train_interpreter.py --exp ./experiments/car_20.json --resume ./checkpoints/interpreter_checkpoint/car_20 --num_sample 10000 --start_step 0 --generate_data True
+python train_deeplab.py --exp ./experiments/car_20.json --data_path ./checkpoints/interpreter_checkpoint/car_20/samples
 
 conda deactivate
