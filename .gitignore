@@ -3,3 +3,4 @@ datasetGAN/dataset_release
 datasetGAN/checkpoints
 datasetGAN/model_dir
 logs/
+*.code-workspace
